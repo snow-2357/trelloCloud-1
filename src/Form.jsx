@@ -39,13 +39,14 @@ const TaskForm = () => {
       });
   
       if (response.ok) {
-        const cardData = await response.json();
-        console.log('Trello card created:', cardData);
+        alert("Trello card created")
       } else {
-        console.error('Error creating Trello card:', response.status, response.statusText);
+        alert("Error creating Trello card")
+        console.error('Error creating Trello card:');
       }
     } catch (error) {
-      console.error('Error creating Trello card:', error);
+        alert("error")
+        console.error('Error creating Trello card:', error);
     }
   };
 
